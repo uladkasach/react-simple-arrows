@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "es7",
+    ],
+  },
+  "atom": {
+    "rewriteTsconfig": false
+  }
+}

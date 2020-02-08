@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArrowSvg should look correct going down and right 1`] = `
+<svg
+  height="309"
+  style="position: absolute; top: -4.5px; left: -4.5px;"
+  width="509"
+>
+  <defs>
+    <marker
+      id="__UUID__"
+      markerHeight="9"
+      markerWidth="15"
+      orient="auto"
+      refX="10.5"
+      refY="4.5"
+    >
+      <path
+        d="M0,0 L0,9 L14,4.5 z"
+        fill="#456"
+      />
+    </marker>
+  </defs>
+  <path
+    d="M 4.5 4.5 C 304.5 4.5 204.5 304.5 504.5 304.5"
+    fill="none"
+    marker-end="url(#__UUID__)"
+    stroke="#456"
+  />
+</svg>
+`;
+
+exports[`ArrowSvg should look correct going up and right 1`] = `
+<svg
+  height="309"
+  style="position: absolute; top: -4.5px; left: -4.5px;"
+  width="509"
+>
+  <defs>
+    <marker
+      id="__UUID__"
+      markerHeight="9"
+      markerWidth="15"
+      orient="auto"
+      refX="10.5"
+      refY="4.5"
+    >
+      <path
+        d="M0,0 L0,9 L14,4.5 z"
+        fill="#456"
+      />
+    </marker>
+  </defs>
+  <path
+    d="M 504.5 4.5 C 204.5 4.5 304.5 304.5 4.5 304.5"
+    fill="none"
+    marker-end="url(#__UUID__)"
+    stroke="#456"
+  />
+</svg>
+`;

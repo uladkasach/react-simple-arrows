@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArrowHeadMarkerSvg should look correct 1`] = `
+<svg>
+  <marker
+    id="__ID__"
+    markerHeight="10"
+    markerWidth="20"
+    orient="auto"
+    refX="15"
+    refY="5"
+  >
+    <path
+      d="M0,0 L0,10 L19,5 z"
+      fill="black"
+    />
+  </marker>
+</svg>
+`;
