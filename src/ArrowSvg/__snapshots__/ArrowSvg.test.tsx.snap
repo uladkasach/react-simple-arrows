@@ -8,7 +8,7 @@ exports[`ArrowSvg should look correct going down and right 1`] = `
 >
   <defs>
     <marker
-      id="__UUID__"
+      id="__UUID1"
       markerHeight="9"
       markerWidth="15"
       orient="auto"
@@ -24,7 +24,109 @@ exports[`ArrowSvg should look correct going down and right 1`] = `
   <path
     d="M 4.5 4.5 C 304.5 4.5 204.5 304.5 504.5 304.5"
     fill="none"
-    marker-end="url(#__UUID__)"
+    marker-end="url(#__UUID1)"
+    stroke="#456"
+  />
+</svg>
+`;
+
+exports[`ArrowSvg should look correct going down and right with highlight custom color enabled 1`] = `
+<svg
+  height="309"
+  style="position: absolute; top: -4.5px; left: -4.5px;"
+  width="509"
+>
+  <defs>
+    <marker
+      id="__UUID7"
+      markerHeight="9"
+      markerWidth="15"
+      orient="auto"
+      refX="10.5"
+      refY="4.5"
+    >
+      <path
+        d="M0,0 L0,9 L14,4.5 z"
+        fill="#456"
+      />
+    </marker>
+    <marker
+      id="__UUID8"
+      markerHeight="9"
+      markerUnits="userSpaceOnUse"
+      markerWidth="15"
+      orient="auto"
+      refX="10.5"
+      refY="4.5"
+    >
+      <path
+        d="M0,0 L0,9 L9,15 L15,0 z"
+        fill="white"
+      />
+    </marker>
+  </defs>
+  <path
+    d="M 4.5 4.5 C 304.5 4.5 204.5 304.5 504.5 304.5"
+    fill="none"
+    marker-end="url(#__UUID8)"
+    stroke="burlywood"
+    stroke-width="5"
+  />
+  <path
+    d="M 4.5 4.5 C 304.5 4.5 204.5 304.5 504.5 304.5"
+    fill="none"
+    marker-end="url(#__UUID7)"
+    stroke="#456"
+  />
+</svg>
+`;
+
+exports[`ArrowSvg should look correct going down and right with highlight default color enabled 1`] = `
+<svg
+  height="309"
+  style="position: absolute; top: -4.5px; left: -4.5px;"
+  width="509"
+>
+  <defs>
+    <marker
+      id="__UUID5"
+      markerHeight="9"
+      markerWidth="15"
+      orient="auto"
+      refX="10.5"
+      refY="4.5"
+    >
+      <path
+        d="M0,0 L0,9 L14,4.5 z"
+        fill="#456"
+      />
+    </marker>
+    <marker
+      id="__UUID6"
+      markerHeight="9"
+      markerUnits="userSpaceOnUse"
+      markerWidth="15"
+      orient="auto"
+      refX="10.5"
+      refY="4.5"
+    >
+      <path
+        d="M0,0 L0,9 L9,15 L15,0 z"
+        fill="white"
+      />
+    </marker>
+  </defs>
+  <path
+    d="M 4.5 4.5 C 304.5 4.5 204.5 304.5 504.5 304.5"
+    fill="none"
+    marker-end="url(#__UUID6)"
+    stroke="pink"
+    stroke-width="5"
+  />
+  <path
+    d="M 4.5 4.5 C 304.5 4.5 204.5 304.5 504.5 304.5"
+    fill="none"
+    marker-end="url(#__UUID5)"
     stroke="#456"
   />
 </svg>
@@ -38,7 +140,7 @@ exports[`ArrowSvg should look correct going up and right 1`] = `
 >
   <defs>
     <marker
-      id="__UUID__"
+      id="__UUID3"
       markerHeight="9"
       markerWidth="15"
       orient="auto"
@@ -54,7 +156,7 @@ exports[`ArrowSvg should look correct going up and right 1`] = `
   <path
     d="M 504.5 4.5 C 204.5 4.5 304.5 304.5 4.5 304.5"
     fill="none"
-    marker-end="url(#__UUID__)"
+    marker-end="url(#__UUID3)"
     stroke="#456"
   />
 </svg>

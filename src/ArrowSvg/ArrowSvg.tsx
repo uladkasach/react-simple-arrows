@@ -4,6 +4,7 @@ import uuid from 'uuid';
 import { LineOrientation, Position } from '../constants';
 import { ArrowHeadMarkerSvg } from './ArrowHeadMarkerSvg';
 import { calculateAestheticLinePath } from './calculateAestheticLinePath';
+import {HighlightArrowHeadSvg} from "./HighlightArrowHeadSvg";
 
 const ARROW_LENGTH = 15;
 const ARROW_WIDTH = 9;
@@ -14,14 +15,19 @@ export const ArrowSvg = ({
   orientation,
   curviness = 0.6,
   color = '#456',
+  highlight = false,
+  highlightColor = 'pink',
 }: {
   start: Position;
   end: Position;
   orientation: LineOrientation;
   curviness?: number;
   color?: string;
+  highlight?: boolean;
+  highlightColor?: string;
 }) => {
   const headId = uuid();
+  const highlightId = uuid();
 
   // define dimensions and coordinates of the svg plane
   const dimensions = {
@@ -59,7 +65,21 @@ export const ArrowSvg = ({
     <svg height={paddedDimensions.height} width={paddedDimensions.width} style={{ position: 'absolute', top: paddedCoordinates.y, left: paddedCoordinates.x }}>
       <defs>
         <ArrowHeadMarkerSvg length={ARROW_LENGTH} width={ARROW_WIDTH} id={headId} color={color} />
+        { highlight ? <HighlightArrowHeadSvg length={ARROW_LENGTH} width={ARROW_WIDTH} id={highlightId} color="white"/> : <></>}
+
       </defs>
+      { highlight ?
+          <path
+              d={calculateAestheticLinePath({
+                start: innerStart,
+                end: innerEnd,
+                orientation,
+                curviness,
+              })}
+              fill="none"
+              stroke={highlightColor}
+              strokeWidth="5"
+              markerEnd={`url(#${highlightId})`}/> : <></>}
       <path
         d={calculateAestheticLinePath({
           start: innerStart,
