@@ -25,6 +25,17 @@ is produced by:
   <ArrowSvg start={{ x: 600, y: 600 }} end={{ x: 200, y: 300 }} orientation={LineOrientation.HORIZONTAL} />
 ```
 
+Highlighting can be added using the `highlight` and `highlightColor` attributes (where `highlightColor` is any CSS-recognised color name, defaulting to pink if none is specified).
+
+#### example
+
+![highlight example](.dev/highlight-image.png)
+
+is produced by:
+
+```tsx
+  <ArrowSvg start={{ x: 0, y: 0 }} end={{ x: 500, y: 300 }} orientation={LineOrientation.HORIZONTAL} highlight={true} highlightColor="cyan" />
+```
 
 ## ArrowBetweenDivs
 
