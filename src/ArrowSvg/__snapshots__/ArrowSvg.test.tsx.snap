@@ -1,5 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ArrowSvg should look correct going down and left 1`] = `
+<svg
+  height="309"
+  style="position: absolute; top: -4.5px; left: -4.5px;"
+  width="509"
+>
+  <defs>
+    <marker
+      id="__UUID__"
+      markerHeight="9"
+      markerWidth="15"
+      orient="auto"
+      refX="10.5"
+      refY="4.5"
+    >
+      <path
+        d="M0,0 L0,9 L14,4.5 z"
+        fill="#456"
+      />
+    </marker>
+  </defs>
+  <path
+    d="M 504.5 4.5 C 204.5 4.5 304.5 304.5 4.5 304.5"
+    fill="none"
+    marker-end="url(#__UUID__)"
+    stroke="#456"
+  />
+</svg>
+`;
+
+exports[`ArrowSvg should look correct going down and left with highlight custom color enabled 1`] = `
+<body
+  style="background-color: cyan;"
+>
+  <svg
+    height="309"
+    style="position: absolute; top: -4.5px; left: -4.5px;"
+    width="509"
+  >
+    <defs>
+      <marker
+        id="__UUID__"
+        markerHeight="9"
+        markerWidth="15"
+        orient="auto"
+        refX="10.5"
+        refY="4.5"
+      >
+        <path
+          d="M0,0 L0,9 L14,4.5 z"
+          fill="#456"
+        />
+      </marker>
+    </defs>
+    <path
+      d="M 504.5 4.5 C 204.5 4.5 304.5 304.5 4.5 304.5"
+      fill="none"
+      pathLength="100"
+      stroke="yellow"
+      stroke-dasharray="98.78314254287675"
+      stroke-width="5"
+    />
+    <path
+      d="M 504.5 4.5 C 204.5 4.5 304.5 304.5 4.5 304.5"
+      fill="none"
+      marker-end="url(#__UUID__)"
+      stroke="#456"
+    />
+  </svg>
+</body>
+`;
+
 exports[`ArrowSvg should look correct going down and right 1`] = `
 <svg
   height="309"
@@ -30,51 +102,9 @@ exports[`ArrowSvg should look correct going down and right 1`] = `
 </svg>
 `;
 
-exports[`ArrowSvg should look correct going down and right with highlight custom color enabled 1`] = `
-<body
-  style="background-color: blue;"
->
-  <svg
-    height="309"
-    style="position: absolute; top: -4.5px; left: -4.5px;"
-    width="509"
-  >
-    <defs>
-      <marker
-        id="__UUID__"
-        markerHeight="9"
-        markerWidth="15"
-        orient="auto"
-        refX="10.5"
-        refY="4.5"
-      >
-        <path
-          d="M0,0 L0,9 L14,4.5 z"
-          fill="#456"
-        />
-      </marker>
-    </defs>
-    <path
-      d="M 4.5 4.5 C 304.5 4.5 204.5 304.5 504.5 304.5"
-      fill="none"
-      pathLength="101"
-      stroke="burlywood"
-      stroke-dasharray="100"
-      stroke-width="5"
-    />
-    <path
-      d="M 4.5 4.5 C 304.5 4.5 204.5 304.5 504.5 304.5"
-      fill="none"
-      marker-end="url(#__UUID__)"
-      stroke="#456"
-    />
-  </svg>
-</body>
-`;
-
 exports[`ArrowSvg should look correct going down and right with highlight default color enabled 1`] = `
 <body
-  style="background-color: blue;"
+  style="background-color: cyan;"
 >
   <svg
     height="309"
@@ -99,9 +129,9 @@ exports[`ArrowSvg should look correct going down and right with highlight defaul
     <path
       d="M 4.5 4.5 C 304.5 4.5 204.5 304.5 504.5 304.5"
       fill="none"
-      pathLength="101"
+      pathLength="100"
       stroke="pink"
-      stroke-dasharray="100"
+      stroke-dasharray="98.78314254287675"
       stroke-width="5"
     />
     <path
@@ -112,34 +142,4 @@ exports[`ArrowSvg should look correct going down and right with highlight defaul
     />
   </svg>
 </body>
-`;
-
-exports[`ArrowSvg should look correct going up and right 1`] = `
-<svg
-  height="309"
-  style="position: absolute; top: -4.5px; left: -4.5px;"
-  width="509"
->
-  <defs>
-    <marker
-      id="__UUID__"
-      markerHeight="9"
-      markerWidth="15"
-      orient="auto"
-      refX="10.5"
-      refY="4.5"
-    >
-      <path
-        d="M0,0 L0,9 L14,4.5 z"
-        fill="#456"
-      />
-    </marker>
-  </defs>
-  <path
-    d="M 504.5 4.5 C 204.5 4.5 304.5 304.5 4.5 304.5"
-    fill="none"
-    marker-end="url(#__UUID__)"
-    stroke="#456"
-  />
-</svg>
 `;

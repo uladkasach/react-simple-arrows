@@ -1,10 +1,12 @@
 import React from 'react';
 import uuid from 'uuid';
 
+import { svgPathProperties } from 'svg-path-properties';
 import { LineOrientation, Position } from '../constants';
 import { ArrowHeadMarkerSvg } from './ArrowHeadMarkerSvg';
 import { calculateAestheticLinePath } from './calculateAestheticLinePath';
 
+const PATH_LENGTH = 100;
 const ARROW_LENGTH = 15;
 const ARROW_WIDTH = 9;
 
@@ -58,6 +60,15 @@ export const ArrowSvg = ({
     y: end.y - paddedCoordinates.y,
   };
 
+  const linePath = calculateAestheticLinePath({
+    start: innerStart,
+    end: innerEnd,
+    orientation,
+    curviness,
+  });
+
+  const linePathLength = svgPathProperties(linePath).getTotalLength();
+
   // return arrow positioned absolutely at the viewport w/ arrows positioned internally
   return (
     <svg height={paddedDimensions.height} width={paddedDimensions.width} style={{ position: 'absolute', top: paddedCoordinates.y, left: paddedCoordinates.x }}>
@@ -66,25 +77,15 @@ export const ArrowSvg = ({
       </defs>
       { highlight ?
           <path
-              d={calculateAestheticLinePath({
-                start: innerStart,
-                end: innerEnd,
-                orientation,
-                curviness,
-              })}
+              d={linePath}
               fill="none"
               stroke={highlightColor}
               strokeWidth="5"
-              strokeDasharray="100"
-              pathLength="101"/> : <></>}
+              strokeDasharray={(PATH_LENGTH / linePathLength) * (linePathLength - (ARROW_LENGTH / 2))}
+              pathLength={PATH_LENGTH} /> : <></>}
 
       <path
-        d={calculateAestheticLinePath({
-          start: innerStart,
-          end: innerEnd,
-          orientation,
-          curviness,
-        })}
+        d={linePath}
         fill="none"
         stroke={color}
         markerEnd={`url(#${headId})`}
