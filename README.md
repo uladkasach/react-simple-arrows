@@ -29,7 +29,7 @@ The width and color of arrows can be adjusted using the `width` and `color` attr
 
 #### example
 
-![highlight example](.dev/thick-green-arrow.png)
+![color-width example](.dev/thick-green-arrow.png)
 
 is produced by:
 
