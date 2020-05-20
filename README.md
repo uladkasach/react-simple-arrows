@@ -25,16 +25,16 @@ is produced by:
   <ArrowSvg start={{ x: 600, y: 600 }} end={{ x: 200, y: 300 }} orientation={LineOrientation.HORIZONTAL} />
 ```
 
-Highlighting can be added using the `highlight` and `highlightColor` attributes (where `highlightColor` is any CSS-recognised color name, defaulting to pink if none is specified).
+The width and color of arrows can be adjusted using the `width` and `color` attributes (where `color` is any CSS-recognised color name, defaulting to black if none is specified).
 
 #### example
 
-![highlight example](.dev/highlight-image.png)
+![highlight example](.dev/thick-green-arrow.png)
 
 is produced by:
 
 ```tsx
-  <ArrowSvg start={{ x: 0, y: 0 }} end={{ x: 500, y: 300 }} orientation={LineOrientation.HORIZONTAL} highlight={true} highlightColor="cyan" />
+  <ArrowSvg start={{ x: 0, y: 0 }} end={{ x: 500, y: 300 }} orientation={LineOrientation.HORIZONTAL} width="3" color="green" />
 ```
 
 ## ArrowBetweenDivs
