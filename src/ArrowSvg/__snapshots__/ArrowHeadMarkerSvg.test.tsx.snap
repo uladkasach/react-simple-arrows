@@ -5,6 +5,7 @@ exports[`ArrowHeadMarkerSvg should look correct 1`] = `
   <marker
     id="__ID__"
     markerHeight="10"
+    markerUnits="userSpaceOnUse"
     markerWidth="20"
     orient="auto"
     refX="15"

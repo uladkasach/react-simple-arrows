@@ -19,19 +19,15 @@ describe('ArrowSvg', () => {
     expect(container.firstChild).not.toEqual(null);
     expect(container.firstChild).toMatchSnapshot();
   });
-  it('should look correct going down and right with highlight default color enabled', async () => {
+  it('should look correct going down and right with custom width and color', async () => {
     const { container } = render(
-        <body style={ { backgroundColor: 'cyan' } }>
-        <ArrowSvg start={{ x: 0, y: 0 }} end={{ x: 500, y: 300 }} orientation={LineOrientation.HORIZONTAL} highlight={true}  />
-        </body>);
+        <ArrowSvg start={{ x: 0, y: 0 }} end={{ x: 500, y: 300 }} orientation={LineOrientation.HORIZONTAL} width="3" color="green" />);
     expect(container.firstChild).not.toEqual(null);
     expect(container.firstChild).toMatchSnapshot();
   });
-  it('should look correct going down and left with highlight custom color enabled', async () => {
+  it('should look correct going down and left with custom width and color', async () => {
     const { container } = render(
-        <body style={ { backgroundColor: 'cyan' } }>
-        <ArrowSvg start={{ x: 500, y: 0 }} end={{ x: 0, y: 300 }} orientation={LineOrientation.HORIZONTAL} highlight={true} highlightColor="yellow"/>
-        </body>);
+        <ArrowSvg start={{ x: 500, y: 0 }} end={{ x: 0, y: 300 }} orientation={LineOrientation.HORIZONTAL} width="3" color="green" />);
     expect(container.firstChild).not.toEqual(null);
     expect(container.firstChild).toMatchSnapshot();
   });

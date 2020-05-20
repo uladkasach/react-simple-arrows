@@ -1,12 +1,10 @@
 import React from 'react';
 import uuid from 'uuid';
 
-import { svgPathProperties } from 'svg-path-properties';
 import { LineOrientation, Position } from '../constants';
 import { ArrowHeadMarkerSvg } from './ArrowHeadMarkerSvg';
 import { calculateAestheticLinePath } from './calculateAestheticLinePath';
 
-const PATH_LENGTH = 100;
 const ARROW_LENGTH = 15;
 const ARROW_WIDTH = 9;
 
@@ -15,17 +13,15 @@ export const ArrowSvg = ({
   end,
   orientation,
   curviness = 0.6,
-  color = '#456',
-  highlight = false,
-  highlightColor = 'pink',
+  color = 'black',
+  width = '1',
 }: {
   start: Position;
   end: Position;
   orientation: LineOrientation;
   curviness?: number;
   color?: string;
-  highlight?: boolean;
-  highlightColor?: string;
+  width?: string;
 }) => {
   const headId = uuid();
 
@@ -60,34 +56,22 @@ export const ArrowSvg = ({
     y: end.y - paddedCoordinates.y,
   };
 
-  const linePath = calculateAestheticLinePath({
-    start: innerStart,
-    end: innerEnd,
-    orientation,
-    curviness,
-  });
-
-  const linePathLength = svgPathProperties(linePath).getTotalLength();
-
   // return arrow positioned absolutely at the viewport w/ arrows positioned internally
   return (
     <svg height={paddedDimensions.height} width={paddedDimensions.width} style={{ position: 'absolute', top: paddedCoordinates.y, left: paddedCoordinates.x }}>
       <defs>
         <ArrowHeadMarkerSvg length={ARROW_LENGTH} width={ARROW_WIDTH} id={headId} color={color} />
       </defs>
-      { highlight ?
-          <path
-              d={linePath}
-              fill="none"
-              stroke={highlightColor}
-              strokeWidth="5"
-              strokeDasharray={(PATH_LENGTH / linePathLength) * (linePathLength - (ARROW_LENGTH / 2))}
-              pathLength={PATH_LENGTH} /> : <></>}
-
       <path
-        d={linePath}
+        d={calculateAestheticLinePath({
+          start: innerStart,
+          end: innerEnd,
+          orientation,
+          curviness,
+        })}
         fill="none"
         stroke={color}
+        strokeWidth={width}
         markerEnd={`url(#${headId})`}
       />
     </svg>
