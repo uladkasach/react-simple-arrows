@@ -25,6 +25,17 @@ is produced by:
   <ArrowSvg start={{ x: 600, y: 600 }} end={{ x: 200, y: 300 }} orientation={LineOrientation.HORIZONTAL} />
 ```
 
+The width and color of arrows can be adjusted using the `strokeWidth` and `color` attributes (where `color` is any CSS-recognised color name, defaulting to black if none is specified).  Note that these attributes can be specified in the `ArrowBetweenDivs` component as well.
+
+#### example
+
+![color-width example](.dev/thick-green-arrow.png)
+
+is produced by:
+
+```tsx
+  <ArrowSvg start={{ x: 0, y: 0 }} end={{ x: 500, y: 300 }} orientation={LineOrientation.HORIZONTAL} strokeWidth="3" color="green" />
+```
 
 ## ArrowBetweenDivs
 

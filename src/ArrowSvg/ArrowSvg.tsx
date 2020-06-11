@@ -13,13 +13,15 @@ export const ArrowSvg = ({
   end,
   orientation,
   curviness = 0.6,
-  color = '#456',
+  color = 'black',
+  strokeWidth = '1',
 }: {
   start: Position;
   end: Position;
   orientation: LineOrientation;
   curviness?: number;
   color?: string;
+  strokeWidth?: string;
 }) => {
   const headId = uuid();
 
@@ -69,6 +71,7 @@ export const ArrowSvg = ({
         })}
         fill="none"
         stroke={color}
+        strokeWidth={strokeWidth}
         markerEnd={`url(#${headId})`}
       />
     </svg>

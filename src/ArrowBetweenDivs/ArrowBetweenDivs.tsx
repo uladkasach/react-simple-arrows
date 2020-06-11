@@ -15,11 +15,15 @@ export const ArrowBetweenDivs = ({
   to,
   orientation,
   curviness,
+  color = 'black',
+  strokeWidth = '1',
 }: {
   from: ArrowDivAnchorDefinition;
   to: ArrowDivAnchorDefinition;
   orientation: LineOrientation;
   curviness?: number;
+  color?: string;
+  strokeWidth?: string;
 }) => {
   const { coordinatesPerId, debug } = useContext(ArrowsBetweenDivsContext);
 
@@ -39,5 +43,5 @@ export const ArrowBetweenDivs = ({
   const end = getArrowAnchorPositionForCoordinates({ coordinates: toCoordinates, placement: to.placement });
 
   // return the arrow
-  return <ArrowSvg start={start} end={end} orientation={orientation} curviness={curviness} />;
+  return <ArrowSvg start={start} end={end} orientation={orientation} curviness={curviness} color={color} strokeWidth={strokeWidth}/>;
 };
